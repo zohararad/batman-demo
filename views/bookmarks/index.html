@@ -1,0 +1,21 @@
+<h1>Bookmarks</h1>
+<ul id="bookmarks">
+  <li data-foreach-bookmark="Bookmark.all">
+    <a data-route="bookmark" data-bind="bookmark.url">URL goes here</a>
+  </li>
+</ul>
+<aside>
+  <form data-formfor-bookmark="controllers.bookmarks.emptyBookmark" data-event-submit="controllers.bookmarks.create">
+    <p>
+      <label for="url">Bookmark</label>
+      <input type="url" name="url" id="url" placeholder="http://" data-bind="bookmark.url" />
+    </p>
+    <p>
+      <label for="tags">Tags</label>
+      <input type="text" name="tags" id="tags" placeholder="tag1, tag2, tag3" data-bind="bookmark.tags" />
+    </p>
+    <p>
+      <input type="submit" value="Add Bookmark" />
+    </p>
+  </form>
+</aside>

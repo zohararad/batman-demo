@@ -1,0 +1,14 @@
+<h1>Showing your bookmark</h1>
+<h4>URL</h4>
+<p>
+  <a data-bind-href="bookmark.url" data-bind="bookmark.url" target="blank">http://www.url.com</a>
+</p>
+<h4>Tags</h4>
+<ul id="tags">
+  <li data-foreach-tag="bookmark.tags">
+    <span data-bind="tag">tag</span>
+  </li>
+</ul>
+<p>
+  <a data-route="bookmarks#index" title="back to bookmarks">Back to bookmarks</a>
+</p>
